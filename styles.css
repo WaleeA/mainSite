@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background: radial-gradient(circle at center, #1a1717 0%, #0F0D0D 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.link-card {
+    background: linear-gradient(145deg, rgba(44, 38, 38, 0.8), rgba(33, 28, 28, 0.6));
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+.link-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(90deg, #EBCA0D, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.link-card p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, #EBCA0D, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background: linear-gradient(to top, rgba(44, 38, 38, 0.95), rgba(44, 38, 38, 0.8));
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+}
+
+.social-links {
+    gap: 2.5rem;
+}
+
+.social-links a {
+    position: relative;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin-bottom: 5rem;
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
+    
+    .link-card {
+        padding: 1.8rem;
+    }
+}
+
+.link-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background-color: rgba(33, 28, 28, 0.8);
+    border-color: rgba(235, 202, 13, 0.3);
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    color: #EBCA0D;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(235, 202, 13, 0.2);
+}
+
+footer {
+    background-color: rgba(44, 38, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-links:hover a:not(:hover) {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: scale(1.1) translateY(-2px);
+    background: rgba(235, 202, 13, 0.1);
+    color: #EBCA0D;
+}
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161313;
+    z-index: 1000;
+    transition: opacity 0.8s ease-out;
+}
+
+.loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wave-emoji {
+    font-size: 12rem;
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.wave-emoji.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.main-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.main-content.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg) scale(1); }
+    10% { transform: rotate(14deg) scale(1.1); }
+    20% { transform: rotate(-8deg) scale(1); }
+    30% { transform: rotate(14deg) scale(1.1); }
+    40% { transform: rotate(-4deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.1); }
+    60% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #EBCA0D;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+p {
+    margin-bottom: 2rem;
+    color: #cccccc;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Add media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .links-container {
+        grid-template-columns: 1fr;  /* Stack cards in single column */
+        padding: 0 1rem;  /* Add some padding on sides */
+    }
+
+    .container {
+        width: 100%;  /* Full width on mobile */
+    }
+
+    h1 {
+        font-size: 2.4rem;  /* Slightly smaller heading on mobile */
+    }
+}
+
+.link-card {
+    background-color: #2C2626;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    background-color: #211C1C;
+}
+
+.link-card h3 {
+    color: #EBCA0D;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.link-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2C2626;
+    padding: 1rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-links:hover a:not(:hover) {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: scale(1.1) translateY(-2px);
+    background: rgba(235, 202, 13, 0.1);
+    color: #EBCA0D;
+}

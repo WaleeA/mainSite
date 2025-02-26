@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="wave-emoji">👋</div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>By.Walee</h1>
+            
+            <div class="links-container">
+                <a href="https://masjidfinder.walee.co.uk" class="link-card">
+                    <h3>Masjid Finder 📍</h3>
+                    <p>Interactive mosque finder for the UK inspired by FajrLabs.</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h3>Coming Soon...</h3>
+                    <p>watch this space</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h3>Coming Soon</h3>
+                    <p>watch this space</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/waleea">GitHub</a>
+            <a href="https://linkedin.com/in/waleea">LinkedIn</a>
+            <a href="https://tiktok.com/@walee.jpeg">TikTok</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            // Show wave emoji first
+            setTimeout(() => {
+                document.querySelector('.wave-emoji').classList.add('show');
+            }, 300);
+
+            // After wave animation, show main content
+            setTimeout(() => {
+                document.querySelector('.loader').classList.add('fade-out');
+                document.querySelector('.main-content').classList.add('show');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
